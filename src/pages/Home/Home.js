@@ -17,7 +17,7 @@ const Home = () => {
                     <Container maxWidth="lg">
                         <Box>
                             <Typography variant="h1">
-                                Plush Fight League
+                                SolMingos NFT
                                 <br />
                                 Best Ever Collection in the world
                             </Typography>

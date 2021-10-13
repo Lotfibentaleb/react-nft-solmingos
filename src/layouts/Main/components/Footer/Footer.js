@@ -8,9 +8,9 @@ const Footer = () => {
     return (
         <Container maxWidth="lg">
             <Box className={classes.root} textAlign="center">
-                <img src="/images/logo.png" alt="Plush Fight League" />
+                <img src="/images/logo.png" alt="PlSolMingos NFT" />
                 <Typography variant="subtitle2">
-                    Copyright © Plush Fight League 2021. All rights reserved
+                    Copyright © SolMingos NFT 2021. All rights reserved
                 </Typography>
                 <Box marginTop={2}>
                     <IconButton href="https://discord.gg/pfl">
