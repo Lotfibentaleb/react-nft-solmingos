@@ -13,10 +13,10 @@ const Footer = () => {
                     Copyright © SolMingos NFT 2021. All rights reserved
                 </Typography>
                 <Box marginTop={2}>
-                    <IconButton href="https://discord.gg/pfl">
+                    <IconButton href="https://discord.gg/jyFWuU4p">
                         <SportsEsports />
                     </IconButton>
-                    <IconButton href="https://twitter.com/pfl_game">
+                    <IconButton href="https://twitter.com/SolmingoNFT">
                         <Twitter />
                     </IconButton>
                 </Box>

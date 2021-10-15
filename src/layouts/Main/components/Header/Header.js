@@ -20,7 +20,8 @@ const Header = () => {
         threshold: 64
     })
 
-    const isLightHeader = !isScrolling
+    // const isLightHeader = !isScrolling
+    const isLightHeader = true
 
     const classes = useStyles()
 
@@ -32,48 +33,32 @@ const Header = () => {
     return (
         <AppBar elevation={0} className={`${classes.appBar} ${isLightHeader ? ' light' : ''}`}>
             <Toolbar className={withSmallStyles(classes.toolbar)}>
-                <Logo />
 
-                <Box flexGrow={1} />
+                {/* <Box flexGrow={1} /> */}
 
-                <Box className={withSmallStyles(classes.navBar)}>
+                <Box className={classes.navBar}>
                     <Hidden smDown>
                         <Box>
                             <Grid container spacing={4}>
                                 <Grid item>
-                                    <Link href="#about-us" variant="caption" color="textPrimary">
-                                        About Us
+                                    <Link href="#introduction" variant="caption" color="#ffffff">
+                                        Introduction
                                     </Link>
                                 </Grid>
                                 <Grid item>
-                                    <Link href="#features" variant="caption" color="textPrimary">
-                                        Features
-                                    </Link>
-                                </Grid>
-                                <Grid item>
-                                    <Link href="#plush-bags" variant="caption" color="textPrimary">
-                                        Plush Bags
-                                    </Link>
-                                </Grid>
-                                <Grid item>
-                                    <Link href="#plushies" variant="caption" color="textPrimary">
-                                        Plushies
-                                    </Link>
-                                </Grid>
-                                <Grid item>
-                                    <Link href="#roadmap" variant="caption" color="textPrimary">
+                                    <Link href="#roadmap" variant="caption" color="#ffffff">
                                         Roadmap
                                     </Link>
                                 </Grid>
                                 <Grid item>
-                                    <Link href="#team" variant="caption" color="textPrimary">
-                                        Team
+                                    <Link href="#faq" variant="caption" color="#ffffff">
+                                        FAQ
                                     </Link>
                                 </Grid>
                             </Grid>
                         </Box>
                     </Hidden>
-                    <Hidden smDown>
+                    {/* <Hidden smDown>
                         <Box marginLeft={8}>
                             <Button variant="contained" color="primary">
                                 Play Now
@@ -86,13 +71,13 @@ const Header = () => {
                                 <PlayArrow />
                             </IconButton>
                         </Hidden>
-                        <IconButton component={Link} href="https://discord.gg/pfl">
+                        <IconButton component={Link} href="https://discord.gg/jyFWuU4p">
                             <SportsEsports />
                         </IconButton>
-                        <IconButton component={Link} href="https://twitter.com/pfl_game">
+                        <IconButton component={Link} href="https://twitter.com/SolmingoNFT">
                             <Twitter />
                         </IconButton>
-                    </Box>
+                    </Box> */}
                 </Box>
             </Toolbar>
         </AppBar>
