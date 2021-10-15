@@ -150,6 +150,7 @@ const useStyles = makeStyles(theme => ({
         height: '130px',
         borderRadius: '15px',
         background: '#FEA7A0',
+        marginLeft: '5px',
         paddingTop: '20px',
         paddingLeft: '20px',
         paddingRight: '20px',
@@ -219,17 +220,19 @@ const useStyles = makeStyles(theme => ({
         backgroundSize: 'cover'
     },
     accodionRoot: {
-        width: '100%'
+        width: '100%',
+        '&.MuiPaper-root': {
+            background: '#fea7a0'
+        }
     },
     heading: {
-        // fontSize: theme.typography.pxToRem(15),
         flexBasis: '33.33%',
         flexShrink: 0,
         color: '#ffffff'
     },
     secondaryHeading: {
-        // fontSize: theme.typography.pxToRem(15),
         color: '#ffffff',
+        textAlign: 'left'
     },
 
     sectionId: {

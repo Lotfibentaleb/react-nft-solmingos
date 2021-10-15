@@ -3,7 +3,7 @@ import {
     AppBar,
     Box,
     Toolbar,
-    Button,
+    Container,
     Link,
     Grid,
     IconButton,
@@ -20,8 +20,8 @@ const Header = () => {
         threshold: 64
     })
 
-    // const isLightHeader = !isScrolling
-    const isLightHeader = true
+    const isLightHeader = !isScrolling
+    // const isLightHeader = true
 
     const classes = useStyles()
 
@@ -35,50 +35,51 @@ const Header = () => {
             <Toolbar className={withSmallStyles(classes.toolbar)}>
 
                 {/* <Box flexGrow={1} /> */}
-
-                <Box className={classes.navBar}>
-                    <Hidden smDown>
-                        <Box>
-                            <Grid container spacing={4}>
-                                <Grid item>
-                                    <Link href="#introduction" variant="caption" color="#ffffff">
-                                        Introduction
-                                    </Link>
+                <Container maxWidth='lg'>
+                    <Box className={withSmallStyles(classes.navBar)}>
+                        <Hidden smDown>
+                            <Box>
+                                <Grid container spacing={4}>
+                                    <Grid item>
+                                        <Link href="#introduction" variant="caption" color="#ffffff">
+                                            Introduction
+                                        </Link>
+                                    </Grid>
+                                    <Grid item>
+                                        <Link href="#roadmap" variant="caption" color="#ffffff">
+                                            Roadmap
+                                        </Link>
+                                    </Grid>
+                                    <Grid item>
+                                        <Link href="#faq" variant="caption" color="#ffffff">
+                                            FAQ
+                                        </Link>
+                                    </Grid>
                                 </Grid>
-                                <Grid item>
-                                    <Link href="#roadmap" variant="caption" color="#ffffff">
-                                        Roadmap
-                                    </Link>
-                                </Grid>
-                                <Grid item>
-                                    <Link href="#faq" variant="caption" color="#ffffff">
-                                        FAQ
-                                    </Link>
-                                </Grid>
-                            </Grid>
-                        </Box>
-                    </Hidden>
-                    {/* <Hidden smDown>
-                        <Box marginLeft={8}>
-                            <Button variant="contained" color="primary">
-                                Play Now
-                            </Button>
-                        </Box>
-                    </Hidden>
-                    <Box marginLeft={4}>
-                        <Hidden mdUp>
-                            <IconButton>
-                                <PlayArrow />
-                            </IconButton>
+                            </Box>
                         </Hidden>
-                        <IconButton component={Link} href="https://discord.gg/jyFWuU4p">
-                            <SportsEsports />
-                        </IconButton>
-                        <IconButton component={Link} href="https://twitter.com/SolmingoNFT">
-                            <Twitter />
-                        </IconButton>
-                    </Box> */}
-                </Box>
+                        {/* <Hidden smDown>
+                            <Box marginLeft={8}>
+                                <Button variant="contained" color="primary">
+                                    Play Now
+                                </Button>
+                            </Box>
+                        </Hidden> */}
+                        <Box marginLeft={4}>
+                            <Hidden mdUp>
+                                <IconButton>
+                                    <PlayArrow />
+                                </IconButton>
+                            </Hidden>
+                            <IconButton href="https://discord.gg/jyFWuU4p">
+                                <SportsEsports />
+                            </IconButton>
+                            <IconButton href="https://twitter.com/SolmingoNFT">
+                                <Twitter />
+                            </IconButton>
+                        </Box>
+                    </Box>
+                </Container>
             </Toolbar>
         </AppBar>
     )

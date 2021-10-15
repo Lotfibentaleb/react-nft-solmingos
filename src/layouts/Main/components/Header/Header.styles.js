@@ -3,8 +3,8 @@ import {makeStyles} from '@material-ui/core/styles'
 const useStyles = makeStyles(theme => ({
     appBar: {
         transition: 'background, height 0.5s',
-        // background: '#211439f0',
-        boxShadow: '0 0 4px rgba(0, 0, 0, .5)',
+        background: 'transparent',
+        boxShadow: 'rgba(0, 0, 0, 0.04) 0px 0px 6px',
         zIndex: theme.zIndex.drawer + 1,
 
         '&.light': {
@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
     toolbar: {
         // transition: 'all 0.5s',
         display: 'flex',
-        justifyContent: 'center',
+        justifyContent: 'flex-end',
         [theme.breakpoints.down('sm')]: {
             height: theme.spacing(7)
         },
@@ -38,7 +38,9 @@ const useStyles = makeStyles(theme => ({
     },
     navBar: {
         display: 'flex',
-        justifyContent: 'center',
+        justifyContent: 'flex-end',
+        paddingRight: theme.spacing(4),
+        height: theme.spacing(10), 
         alignItems: 'center',
         transition: 'all 0.5s',
         // [theme.breakpoints.up('md')]: {
@@ -46,7 +48,9 @@ const useStyles = makeStyles(theme => ({
         // },
         '&.small': {
             [theme.breakpoints.up('md')]: {
-                marginTop: 0
+                marginTop: 0,
+                height: theme.spacing(10),
+                background: '#fed1ce99'
             }
         }
     },

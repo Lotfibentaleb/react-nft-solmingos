@@ -57,7 +57,7 @@ const Home = () => {
                             </Box>
                             <Box className={classes.secondArticleArea}>
                                 <Box className={classes.secondArticleBox}>
-                                    <video className={classes.video} controls loop autoPlay muted>
+                                    <video className={classes.video} loop autoPlay muted>
                                         <source src='videos/Gif.mov' type="video/mp4"></source>
                                     </video>
                                 </Box>
@@ -166,7 +166,7 @@ const Home = () => {
                                                     <Typography className={classes.secondaryHeading} variant='h5'>{item.question}</Typography>
                                                     </AccordionSummary>
                                                     <AccordionDetails>
-                                                    <Typography variant='h5'>
+                                                    <Typography className={classes.secondaryHeading} variant='h5'>
                                                         {item.answer}
                                                     </Typography>
                                                     </AccordionDetails>
