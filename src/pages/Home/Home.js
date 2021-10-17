@@ -6,7 +6,8 @@ import {
     Accordion, 
     AccordionDetails, 
     AccordionSummary, 
-    Typography
+    Typography,
+    Hidden
 } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import useStyles from './Home.styles';
@@ -34,7 +35,6 @@ const Home = () => {
                 </Box>
 
                 {/**introduction section */}
-                
                 <Box className={classes.introSection}>
                     <Box className={classes.sectionId} id='introduction'></Box>
                     <Fade bottom duration={1500} distance='50px'>
@@ -53,6 +53,7 @@ const Home = () => {
                                         Living on blockchain has many influences causing each member
                                         to become a unique NFT available for adoption soon.
                                     </Typography>
+                                    <Box className={classes.featherOne}></Box>
                                 </Box>
                             </Box>
                             <Box className={classes.secondArticleArea}>
@@ -60,13 +61,12 @@ const Home = () => {
                                     <video className={classes.video} loop autoPlay muted>
                                         <source src='videos/Gif.mov' type="video/mp4"></source>
                                     </video>
+                                    <Box className={classes.featherTwo}></Box>
+                                    <Box className={classes.featherThree}></Box>
                                 </Box>
                             </Box>
                         </Box>
                     </Fade>
-                    <Box className={classes.featherOne}></Box>
-                    <Box className={classes.featherTwo}></Box>
-                    <Box className={classes.featherThree}></Box>
                 </Box>
 
                 {/**roadmap section */}
@@ -78,58 +78,112 @@ const Home = () => {
                                 <img className={classes.introLogo} src='images/label-roadmap.png' alt='Roadmap' />
                             </Box>
                             <Box className={classes.roadmapArea} mt={4}>
-                                <Grid container spacing={8}>
-                                    <Grid item md={6}>
-                                        <Box className={classes.stageOne}>
-                                            <Typography variant='h4'>
-                                                Stage 1
-                                            </Typography>
-                                            <Typography variant='h6'>
-                                                The 4000 solmingos are incubating. The 
-                                                <br />
-                                                artist works on each unqiue 
-                                                <br />
-                                                characteristic, aiming to provide every   
-                                                NFT to be exciting regarless ot he rarity
-                                            </Typography>
-                                        </Box>
-                                        <Box className={classes.stageThree}>
-                                            <Typography variant='h4'>
-                                                Stage 3
-                                            </Typography>
-                                            <Typography variant='h6'>
-                                                list collection on marketplaces.
-                                            </Typography>
-                                        </Box>
-                                        <Box className={classes.stageFive}>
-                                            <Typography variant='h4'>
-                                                Stage 5
-                                            </Typography>
-                                            <Typography variant='h6'>
-                                                Profits from merch sales go back to Solmingo holders,
-                                                the more solmingos you hold the greater your percentage of profits.
-                                            </Typography>
-                                        </Box>
+                                <Hidden smDown>
+                                    <Grid container spacing={8}>
+                                        <Grid item md={6}>
+                                            <Box className={classes.stageOne}>
+                                                <Typography variant='h4'>
+                                                    Stage 1
+                                                </Typography>
+                                                <Typography variant='h6'>
+                                                    The 4000 solmingos are incubating. The 
+                                                    <br />
+                                                    artist works on each unqiue 
+                                                    <br />
+                                                    characteristic, aiming to provide every   
+                                                    NFT to be exciting regarless ot he rarity
+                                                </Typography>
+                                            </Box>
+                                            <Box className={classes.stageThree}>
+                                                <Typography variant='h4'>
+                                                    Stage 3
+                                                </Typography>
+                                                <Typography variant='h6'>
+                                                    list collection on marketplaces.
+                                                </Typography>
+                                            </Box>
+                                            <Box className={classes.stageFive}>
+                                                <Typography variant='h4'>
+                                                    Stage 5
+                                                </Typography>
+                                                <Typography variant='h6'>
+                                                    Profits from merch sales go back to Solmingo holders,
+                                                    the more solmingos you hold the greater your percentage of profits.
+                                                </Typography>
+                                            </Box>
+                                        </Grid>
+                                        <Grid item md={6}>
+                                            <Box className={classes.stageTwo}>
+                                                <Typography variant='h4'>
+                                                    Stage 2
+                                                </Typography>
+                                                <Typography variant='h6'>
+                                                    Mint all 4000 Solmingos onto the blockchain
+                                                </Typography>   
+                                            </Box>
+                                            <Box className={classes.stageFour}>
+                                                <Typography variant='h4'>
+                                                    Stage 4
+                                                </Typography>
+                                                <Typography variant='h6'>
+                                                    25% of royalities go to a mutual wallet for merch development
+                                                </Typography>   
+                                            </Box>
+                                        </Grid>
                                     </Grid>
-                                    <Grid item md={6}>
-                                        <Box className={classes.stageTwo}>
-                                            <Typography variant='h4'>
-                                                Stage 2
-                                            </Typography>
-                                            <Typography variant='h6'>
-                                                Mint all 4000 Solmingos onto the blockchain
-                                            </Typography>   
-                                        </Box>
-                                        <Box className={classes.stageFour}>
-                                            <Typography variant='h4'>
-                                                Stage 4
-                                            </Typography>
-                                            <Typography variant='h6'>
-                                                25% of royalities go to a mutual wallet for merch development
-                                            </Typography>   
-                                        </Box>
+                                </Hidden>
+                                <Hidden mdUp>
+                                    <Grid container spacing={8}>
+                                        <Grid item md={6}>
+                                            <Box className={classes.stageOne}>
+                                                <Typography variant='h4'>
+                                                    Stage 1
+                                                </Typography>
+                                                <Typography variant='h6'>
+                                                    The 4000 solmingos are incubating. The 
+                                                    <br />
+                                                    artist works on each unqiue 
+                                                    <br />
+                                                    characteristic, aiming to provide every   
+                                                    NFT to be exciting regarless ot he rarity
+                                                </Typography>
+                                            </Box>
+                                            <Box className={classes.stageTwo}>
+                                                <Typography variant='h4'>
+                                                    Stage 2
+                                                </Typography>
+                                                <Typography variant='h6'>
+                                                    Mint all 4000 Solmingos onto the blockchain
+                                                </Typography>   
+                                            </Box>
+                                            <Box className={classes.stageThree}>
+                                                <Typography variant='h4'>
+                                                    Stage 3
+                                                </Typography>
+                                                <Typography variant='h6'>
+                                                    list collection on marketplaces.
+                                                </Typography>
+                                            </Box>
+                                            <Box className={classes.stageFour}>
+                                                <Typography variant='h4'>
+                                                    Stage 4
+                                                </Typography>
+                                                <Typography variant='h6'>
+                                                    25% of royalities go to a mutual wallet for merch development
+                                                </Typography>   
+                                            </Box>
+                                            <Box className={classes.stageFive}>
+                                                <Typography variant='h4'>
+                                                    Stage 5
+                                                </Typography>
+                                                <Typography variant='h6'>
+                                                    Profits from merch sales go back to Solmingo holders,
+                                                    the more solmingos you hold the greater your percentage of profits.
+                                                </Typography>
+                                            </Box>
+                                        </Grid>
                                     </Grid>
-                                </Grid>
+                                </Hidden>
                             </Box>
                         </Box>
                     </Fade>

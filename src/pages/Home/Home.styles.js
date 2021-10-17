@@ -19,46 +19,11 @@ const useStyles = makeStyles(theme => ({
 
     // introduction
     introSection: {
-        position: 'relative',
         width: '100%',
         background: '#fed1ce',
         textAlign: 'center',
         paddingBottom: '50px',
         background: 'linear-gradient(#fec8c5, #fed1ce 40%)'
-    },
-    featherOne: {
-        position: 'absolute',
-        width: '200px',
-        height: '290px',
-        left: '85px',
-        top: '195px',
-        backgroundImage: 'url(' + '/images/bird-feather1.png' + ')',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-        backgroundSize: 'contain'
-    },
-    featherTwo: {
-        position: 'absolute',
-        width: '210px',
-        height: '280px',    
-        left: '12%',
-        bottom: '80px',
-        backgroundImage: 'url(' + '/images/bird-feather2.png' + ')',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-        backgroundSize: 'contain'
-
-    },
-    featherThree: {
-        position: 'absolute',
-        width: '280px',
-        height: '200px',
-        right: '22%',
-        bottom: '-8px',
-        backgroundImage: 'url(' + '/images/bird-feather3.png' + ')',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-        backgroundSize: 'cover'
     },
     introLogoBox: {
         width: '100%',
@@ -71,16 +36,38 @@ const useStyles = makeStyles(theme => ({
         paddingLeft: '130px',
         paddingRight: '130px',
         display: 'flex',
-        justifyContent: 'flex-end'
+        justifyContent: 'flex-end',
+        [theme.breakpoints.down('sm')]: {
+            paddingLeft: '50px',
+            paddingRight: '50px',
+        },
     },
     firstArticleBox: {
+        position: 'relative',
         width: '800px',
         height: '500px',
         paddingTop: '30px',
         paddingLeft: '30px',
         borderRadius: '16px',
         background: '#fea6a0',
-        textAlign: 'left'
+        textAlign: 'left',
+        [theme.breakpoints.down('sm')]: {
+            height: 'auto',
+        },
+    },
+    featherOne: {
+        position: 'absolute',
+        width: '200px',
+        height: '290px',
+        left: '-210px',
+        top: '10px',
+        backgroundImage: 'url(' + '/images/bird-feather1.png' + ')',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        backgroundSize: 'contain',
+        [theme.breakpoints.down('sm')]: {
+            backgroundImage: 'none'
+        },
     },
     secondArticleArea: {
         width: '100%',
@@ -91,6 +78,7 @@ const useStyles = makeStyles(theme => ({
         justifyContent: 'center'
     },
     secondArticleBox: {
+        position: 'relative',
         width: '350px',
         height: '350px',
         borderRadius: '16px',
@@ -98,6 +86,43 @@ const useStyles = makeStyles(theme => ({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center'
+    },
+    featherTwo: {
+        position: 'absolute',
+        width: '210px',
+        height: '280px',    
+        left: '-270px',
+        [theme.breakpoints.down('sm')]: {
+            left: '-125px',
+            width: '120px',
+        },
+        top: '0px',
+        backgroundImage: 'url(' + '/images/bird-feather2.png' + ')',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        backgroundSize: 'contain',
+        [theme.breakpoints.down('xs')]: {
+            backgroundImage: 'none'
+        },
+    },
+    featherThree: {
+        position: 'absolute',
+        width: '280px',
+        height: '200px',
+        right: '-150px',
+        bottom: '-50px',
+        [theme.breakpoints.down('sm')]: {
+            right: '-140px',
+            height: '120px',
+            bottom: '-35px',
+        },
+        backgroundImage: 'url(' + '/images/bird-feather3.png' + ')',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        backgroundSize: 'contain',
+        [theme.breakpoints.down('xs')]: {
+            backgroundImage: 'none'
+        },
     },
     video: {
         width: '90%',
@@ -115,13 +140,19 @@ const useStyles = makeStyles(theme => ({
     roadmapLine: {
         position: 'absolute',
         top: '350px',
-        left: '546px',
+        left: '44%',
         width: '105px',
         height: '470px',
         backgroundImage: 'url(' + '/images/roadmap.png' + ')',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'top',
-        backgroundSize: 'cover'
+        backgroundSize: 'cover',
+        [theme.breakpoints.down('sm')]: {
+            backgroundImage: 'none'
+        },
+        [theme.breakpoints.down('md')]: {
+            left: '43%',
+        },
     },
     roadmapLogoBox: {
         width: '100%',
@@ -146,6 +177,9 @@ const useStyles = makeStyles(theme => ({
     },
     stageTwo: {
         marginTop: '150px',
+        [theme.breakpoints.down('sm')]: {
+            marginTop: '50px',
+        },
         width: '100%',
         height: '130px',
         borderRadius: '15px',
@@ -169,6 +203,9 @@ const useStyles = makeStyles(theme => ({
     },
     stageFour: {
         marginTop: '120px',
+        [theme.breakpoints.down('sm')]: {
+            marginTop: '50px',
+        },
         width: '100%',
         height: '130px',
         borderRadius: '15px',

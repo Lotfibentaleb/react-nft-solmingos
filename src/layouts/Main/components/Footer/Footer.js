@@ -1,4 +1,4 @@
-import {Box, Container, IconButton, Link, Typography} from '@material-ui/core'
+import {Box, Container, IconButton, Grid, Typography} from '@material-ui/core'
 import { SportsEsports, Twitter } from '@material-ui/icons'
 import useStyles from './Footer.styles'
 
@@ -8,7 +8,11 @@ const Footer = () => {
     return (
         <Container maxWidth="lg">
             <Box className={classes.root} textAlign="center">
-                <img src="/images/logo.png" alt="PlSolMingos NFT" />
+                <Grid container justifyContent="center">
+                    <Grid item>
+                        <img className={classes.footerLogo} src="/images/logo.png" alt="PlSolMingos NFT" />
+                    </Grid>
+                </Grid>
                 <Typography variant="subtitle2">
                     Copyright © SolMingos NFT 2021. All rights reserved
                 </Typography>
