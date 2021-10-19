@@ -30,6 +30,11 @@ const useStyles = makeStyles(theme => ({
         textAlign: 'center',
         marginTop: '20px'
     },
+    introLogo: {
+        [theme.breakpoints.down('xs')]: {
+            height: '70px',
+        }
+    },
     firstArticleArea: {
         width: '100%',
         paddingTop: '20px',
@@ -45,15 +50,14 @@ const useStyles = makeStyles(theme => ({
     firstArticleBox: {
         position: 'relative',
         width: '800px',
-        height: '500px',
+        height: 'auto',
         paddingTop: '30px',
         paddingLeft: '30px',
+        paddingRight: '20px',
+        paddingBottom: '30px',
         borderRadius: '16px',
         background: '#fea6a0',
-        textAlign: 'left',
-        [theme.breakpoints.down('sm')]: {
-            height: 'auto',
-        },
+        textAlign: 'left'
     },
     featherOne: {
         position: 'absolute',
@@ -152,6 +156,7 @@ const useStyles = makeStyles(theme => ({
         },
         [theme.breakpoints.down('md')]: {
             left: '43%',
+            top: '380px',
         },
     },
     roadmapLogoBox: {
@@ -167,7 +172,8 @@ const useStyles = makeStyles(theme => ({
     },
     stageOne: {
         width: '100%',
-        height: '250px',
+        height: 'auto',
+        paddingBottom: '20px',
         borderRadius: '15px',
         background: '#FEA7A0',
         paddingTop: '30px',
@@ -176,12 +182,13 @@ const useStyles = makeStyles(theme => ({
         textAlign: 'left'
     },
     stageTwo: {
-        marginTop: '150px',
+        marginTop: '170px',
         [theme.breakpoints.down('sm')]: {
             marginTop: '50px',
         },
         width: '100%',
-        height: '130px',
+        height: 'auto',
+        paddingBottom: '20px',
         borderRadius: '15px',
         background: '#FEA7A0',
         marginLeft: '5px',
@@ -191,9 +198,10 @@ const useStyles = makeStyles(theme => ({
         textAlign: 'left'
     },
     stageThree: {
-        marginTop: '50px',
+        marginTop: '70px',
         width: '100%',
-        height: '130px',
+        height: 'auto',
+        paddingBottom: '20px',
         borderRadius: '15px',
         background: '#FEA7A0',
         paddingTop: '20px',
@@ -202,12 +210,13 @@ const useStyles = makeStyles(theme => ({
         textAlign: 'left'
     },
     stageFour: {
-        marginTop: '120px',
+        marginTop: '100px',
         [theme.breakpoints.down('sm')]: {
             marginTop: '50px',
         },
         width: '100%',
-        height: '130px',
+        height: 'auto',
+        paddingBottom: '20px',
         borderRadius: '15px',
         background: '#FEA7A0',
         paddingTop: '15px',
@@ -216,9 +225,10 @@ const useStyles = makeStyles(theme => ({
         textAlign: 'left'
     },
     stageFive: {
-        marginTop: '60px',
+        marginTop: '70px',
         width: '100%',
-        height: '200px',
+        height: 'auto',
+        paddingBottom: '20px',
         borderRadius: '15px',
         background: '#FEA7A0',
         paddingTop: '20px',
